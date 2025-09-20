@@ -161,14 +161,48 @@ colors: {
 ## 🚀 Деплой
 
 ### Vercel (рекомендуется)
-1. Подключите репозиторий к Vercel
-2. Настройте переменные окружения
-3. Деплой автоматический при push в main
+1. Перейдите на [vercel.com](https://vercel.com)
+2. Войдите через GitHub
+3. Нажмите "New Project"
+4. Выберите репозиторий `pediatr-web`
+5. Настройте переменные окружения (если нужно)
+6. Нажмите "Deploy" - сайт будет доступен по ссылке
 
 ### Netlify
-1. Подключите репозиторий к Netlify
-2. Настройте build команду: `npm run build`
-3. Укажите папку: `out`
+1. Перейдите на [netlify.com](https://netlify.com)
+2. Войдите через GitHub
+3. Нажмите "New site from Git"
+4. Выберите репозиторий `pediatr-web`
+5. Настройте:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+6. Нажмите "Deploy site"
+
+### GitHub Pages
+1. В настройках репозитория перейдите в "Pages"
+2. Выберите источник: "GitHub Actions"
+3. Создайте файл `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ main ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm run build
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+```
 
 ### VPS/Хостинг
 1. Соберите проект: `npm run build`
