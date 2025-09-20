@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: 'Детский врач - Педиатр | Консультации и лечение детей',
   description: 'Профессиональные услуги педиатра для детей от 0 до 17 лет. Консультации, лечение, профилактика. Опытный врач с многолетним стажем.',
   keywords: 'педиатр, детский врач, консультация педиатра, лечение детей, детская медицина',

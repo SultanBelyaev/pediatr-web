@@ -147,15 +147,20 @@ export const trackMobileUsage = () => {
   }
 }
 
+// Функция gtag для Google Analytics
+const gtag = (...args: any[]) => {
+  if (typeof window !== 'undefined') {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push(args)
+  }
+}
+
 // Инициализация аналитики
 export const initAnalytics = () => {
   if (typeof window !== 'undefined') {
     // Google Analytics
     if (GA_TRACKING_ID) {
       window.dataLayer = window.dataLayer || []
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args)
-      }
       window.gtag = gtag
       gtag('js', new Date())
       gtag('config', GA_TRACKING_ID, {
