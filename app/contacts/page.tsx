@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import ContactHero from '@/components/ContactHero'
 import ContactForm from '@/components/ContactForm'
 import ContactInfo from '@/components/ContactInfo'
-import Map from '@/components/Map'
 
 export const metadata: Metadata = {
   title: 'Контакты - Детский врач | Записаться на прием',
@@ -16,7 +15,6 @@ export default function ContactsPage() {
       <ContactHero />
       <ContactInfo />
       <ContactForm />
-      <Map />
     </>
   )
 }

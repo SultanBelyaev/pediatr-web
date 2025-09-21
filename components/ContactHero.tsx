@@ -109,36 +109,6 @@ export default function ContactHero() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Экстренные случаи
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Если у вашего ребенка высокая температура, рвота, затрудненное дыхание или другие тревожные симптомы, 
-              не ждите записи — звоните немедленно!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+79307140303" 
-                className="bg-red-600 text-white hover:bg-red-700 font-medium py-3 px-6 rounded-lg transition-colors duration-200"
-              >
-                🚨 Экстренный вызов
-              </a>
-              <a 
-                href="tel:103" 
-                className="bg-orange-600 text-white hover:bg-orange-700 font-medium py-3 px-6 rounded-lg transition-colors duration-200"
-              >
-                📞 Скорая помощь: 103
-              </a>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
