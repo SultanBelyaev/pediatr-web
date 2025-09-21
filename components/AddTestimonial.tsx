@@ -46,28 +46,29 @@ export default function AddTestimonial() {
     setIsSubmitting(true)
     
     try {
-      // Формируем данные для Google Sheets
+      // Формируем данные для отправки
       const displayName = formData.isAnonymous ? 'Анонимный пользователь' : (formData.name || 'Анонимный пользователь')
-      const submitData = {
-        name: displayName,
-        childAge: formData.childAge || 'Не указан',
-        rating: formData.rating,
-        service: formData.service || 'Не указана',
-        message: formData.message,
-        date: new Date().toLocaleDateString('ru-RU'),
-        timestamp: new Date().toISOString()
-      }
-
-      // Отправляем данные в Google Sheets
-      await fetch('https://script.google.com/macros/s/AKfycbzL7o8Y3J4kQXoQJvK3w1IVx27J4aGyltKBZwFE/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(submitData)
-      })
       
+      // Создаем сообщение для отправки в Telegram
+      const message = `📝 Новый отзыв о враче:
+
+👤 Имя: ${displayName}
+👶 Возраст ребенка: ${formData.childAge || 'Не указан'}
+⭐ Оценка: ${'⭐'.repeat(formData.rating)} (${formData.rating}/5)
+🏥 Услуга: ${formData.service || 'Не указана'}
+
+💬 Отзыв:
+"${formData.message}"
+
+📅 Дата: ${new Date().toLocaleDateString('ru-RU')}`
+
+      // Отправляем в Telegram (временно, пока не настроен Google Sheets)
+      const telegramUrl = `https://t.me/Pashap1991?text=${encodeURIComponent(message)}`
+      
+      // Открываем Telegram в новой вкладке
+      window.open(telegramUrl, '_blank')
+      
+      // Показываем сообщение об успехе
       setIsSubmitting(false)
       setSubmitStatus('success')
       
