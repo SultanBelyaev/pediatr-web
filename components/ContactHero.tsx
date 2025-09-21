@@ -41,7 +41,7 @@ export default function ContactHero() {
       icon: FaClock,
       title: 'Время работы',
       description: 'Когда я доступен',
-      value: 'Пн-Пт: 9:00-18:00, Сб: 9:00-14:00',
+      value: 'Пн-Вс: 8:00-20:00',
       action: null,
       color: 'bg-orange-100 text-orange-600'
     }

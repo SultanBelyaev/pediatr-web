@@ -76,7 +76,7 @@ export default function Map() {
                   <div>
                     <p className="font-medium text-gray-900">Телефон</p>
                     <p className="text-gray-600">+7 930 714 0303</p>
-                    <p className="text-sm text-gray-500">Рабочие дни: 9:00-18:00</p>
+                    <p className="text-sm text-gray-500">Рабочие дни: 8:00-20:00</p>
                   </div>
                 </div>
 
@@ -84,9 +84,7 @@ export default function Map() {
                   <FaClock className="w-5 h-5 text-primary-600 mt-1" />
                   <div>
                     <p className="font-medium text-gray-900">Режим работы</p>
-                    <p className="text-gray-600">Пн-Пт: 9:00-18:00</p>
-                    <p className="text-gray-600">Сб: 9:00-14:00</p>
-                    <p className="text-sm text-gray-500">Вс: выходной</p>
+                    <p className="text-gray-600">Пн-Вс: 8:00-20:00</p>
                   </div>
                 </div>
               </div>

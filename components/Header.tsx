@@ -32,7 +32,7 @@ export default function Header() {
               </div>
             </div>
             <div className="hidden md:block">
-              <span>Работаем: Пн-Пт 9:00-18:00, Сб 9:00-14:00</span>
+              <span>Работаем: Пн-Вс 8:00-20:00</span>
             </div>
           </div>
         </div>

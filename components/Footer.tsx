@@ -89,8 +89,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <FaClock className="w-4 h-4 text-primary-400" />
                 <div className="text-gray-300">
-                  <div>Пн-Пт: 9:00-18:00</div>
-                  <div>Сб: 9:00-14:00</div>
+                  <div>Пн-Вс: 8:00-20:00</div>
                 </div>
               </div>
             </div>
