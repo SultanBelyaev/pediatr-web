@@ -7,7 +7,7 @@ export default function TestimonialsHero() {
   const stats = [
     { number: '4.9', label: 'Средняя оценка' },
     { number: '150+', label: 'Отзывов' },
-    { number: '98%', label: 'Рекомендуют' },
+    { number: '100%', label: 'Рекомендуют' },
     { number: '5', label: 'Лет на сайте' }
   ]
 
