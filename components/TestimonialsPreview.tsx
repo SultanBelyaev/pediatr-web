@@ -7,22 +7,25 @@ import { FaStar, FaQuoteLeft } from 'react-icons/fa'
 export default function TestimonialsPreview() {
   const testimonials = [
     {
-      name: 'Анна Петрова',
-      child: 'мама Маши, 3 года',
-      text: 'Очень благодарна доктору за профессиональный подход. Маша перестала бояться врачей благодаря доброму отношению и терпению. Рекомендую всем родителям!',
-      rating: 5
+      name: 'Анонимный пользователь',
+      child: 'мама сына, 2,5 года',
+      text: 'Очень добрый и внимательный врач и к детям и, что немаловажно, к взволнованным, нервным порой, родителям. Наш сын, 2,5 года, всегда с радостью идет на прием, сейчас пытается выговаривать Али Муслимович. Приятно видеть, как у врача есть контакт с твоим ребенком.',
+      rating: 5,
+      source: 'https://prodoctorov.ru/nnovgorod/vrach/496615-magomedov/otzivi/'
     },
     {
-      name: 'Михаил Соколов',
-      child: 'папа Данила, 7 лет',
-      text: 'Доктор помог нам разобраться с проблемами пищеварения у сына. Очень внимательный специалист, всегда находит время для подробных объяснений.',
-      rating: 5
+      name: 'Анонимный пользователь',
+      child: 'родитель пациента',
+      text: 'Компетентный специалист. Отличный, внимательный врач и профессионал своего дела. Обязательно буду рекомендовать Магомедова Али Муслимовича своим знакомым и близким. Очень благодарны ему за выздоровления ребенка.',
+      rating: 5,
+      source: 'https://prodoctorov.ru/nnovgorod/vrach/496615-magomedov/otzivi/'
     },
     {
-      name: 'Елена Козлова',
-      child: 'мама Алисы, 1 год',
-      text: 'Спасибо за наблюдение за нашей малышкой с самого рождения. Доктор всегда на связи, дает ценные советы по уходу и развитию ребенка.',
-      rating: 5
+      name: 'Анонимный пользователь',
+      child: 'родитель из Костромской области',
+      text: 'Никогда не писала отзывов ни об одном враче. Хотя с ребенком пришлось объехать очень много разных - не сосчитаю... К Али Муслимовичу обращаемся из Костромской области. Ребята, таких врачей, как говорят, днем с огнем не сыщешь! Профессионал! Умница!',
+      rating: 5,
+      source: 'https://prodoctorov.ru/nnovgorod/vrach/496615-magomedov/otzivi/'
     }
   ]
 
@@ -70,7 +73,15 @@ export default function TestimonialsPreview() {
               
               <div className="border-t border-gray-100 pt-4">
                 <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                <div className="text-sm text-gray-500">{testimonial.child}</div>
+                <div className="text-sm text-gray-500 mb-2">{testimonial.child}</div>
+                <a 
+                  href={testimonial.source} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-xs text-primary-600 hover:text-primary-700 transition-colors"
+                >
+                  Читать на ПроДокторов →
+                </a>
               </div>
             </motion.div>
           ))}
