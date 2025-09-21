@@ -11,7 +11,8 @@ export default function AddTestimonial() {
     rating: 5,
     service: '',
     message: '',
-    agreeToPublish: false
+    agreeToPublish: false,
+    isAnonymous: false
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -44,24 +45,47 @@ export default function AddTestimonial() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Имитация отправки отзыва
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setIsSubmitting(false)
-    setSubmitStatus('success')
-    
-    // Сброс формы через 3 секунды
-    setTimeout(() => {
-      setSubmitStatus('idle')
-      setFormData({
-        name: '',
-        childAge: '',
-        rating: 5,
-        service: '',
-        message: '',
-        agreeToPublish: false
-      })
-    }, 3000)
+    try {
+      // Формируем сообщение для Telegram
+      const displayName = formData.isAnonymous ? 'Анонимный пользователь' : (formData.name || 'Анонимный пользователь')
+      const stars = '⭐'.repeat(formData.rating)
+      
+      const message = `📝 Новый отзыв о враче:
+
+👤 Имя: ${displayName}
+👶 Возраст ребенка: ${formData.childAge || 'Не указан'}
+⭐ Оценка: ${stars} (${formData.rating}/5)
+🏥 Услуга: ${formData.service || 'Не указана'}
+
+💬 Отзыв:
+"${formData.message}"
+
+📅 Дата: ${new Date().toLocaleDateString('ru-RU')}`
+
+      // Открываем Telegram с сообщением
+      const telegramUrl = `https://t.me/Pashap1991?text=${encodeURIComponent(message)}`
+      window.open(telegramUrl, '_blank')
+      
+      setIsSubmitting(false)
+      setSubmitStatus('success')
+      
+      // Сброс формы через 3 секунды
+      setTimeout(() => {
+        setSubmitStatus('idle')
+        setFormData({
+          name: '',
+          childAge: '',
+          rating: 5,
+          service: '',
+          message: '',
+          agreeToPublish: false,
+          isAnonymous: false
+        })
+      }, 3000)
+    } catch (error) {
+      setIsSubmitting(false)
+      setSubmitStatus('error')
+    }
   }
 
   if (submitStatus === 'success') {
@@ -125,7 +149,7 @@ export default function AddTestimonial() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Ваше имя *
+                    Ваше имя
                   </label>
                   <div className="relative">
                     <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -134,10 +158,22 @@ export default function AddTestimonial() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      placeholder="Имя Фамилия"
+                      disabled={formData.isAnonymous}
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent disabled:bg-gray-100 disabled:text-gray-500"
+                      placeholder={formData.isAnonymous ? "Анонимный пользователь" : "Имя Фамилия"}
                     />
+                  </div>
+                  <div className="mt-2">
+                    <label className="flex items-center">
+                      <input
+                        type="checkbox"
+                        name="isAnonymous"
+                        checked={formData.isAnonymous}
+                        onChange={handleInputChange}
+                        className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
+                      />
+                      <span className="ml-2 text-sm text-gray-600">Опубликовать как "Анонимный пользователь"</span>
+                    </label>
                   </div>
                 </div>
 

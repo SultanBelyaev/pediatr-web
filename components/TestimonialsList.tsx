@@ -187,9 +187,14 @@ export default function TestimonialsList() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <button className="btn-secondary">
+          <a 
+            href="https://prodoctorov.ru/nnovgorod/vrach/496615-magomedov/#rating"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
             Показать еще отзывы
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
