@@ -46,25 +46,27 @@ export default function AddTestimonial() {
     setIsSubmitting(true)
     
     try {
-      // Формируем сообщение для Telegram
+      // Формируем данные для Google Sheets
       const displayName = formData.isAnonymous ? 'Анонимный пользователь' : (formData.name || 'Анонимный пользователь')
-      const stars = '⭐'.repeat(formData.rating)
-      
-      const message = `📝 Новый отзыв о враче:
+      const submitData = {
+        name: displayName,
+        childAge: formData.childAge || 'Не указан',
+        rating: formData.rating,
+        service: formData.service || 'Не указана',
+        message: formData.message,
+        date: new Date().toLocaleDateString('ru-RU'),
+        timestamp: new Date().toISOString()
+      }
 
-👤 Имя: ${displayName}
-👶 Возраст ребенка: ${formData.childAge || 'Не указан'}
-⭐ Оценка: ${stars} (${formData.rating}/5)
-🏥 Услуга: ${formData.service || 'Не указана'}
-
-💬 Отзыв:
-"${formData.message}"
-
-📅 Дата: ${new Date().toLocaleDateString('ru-RU')}`
-
-      // Открываем Telegram с сообщением
-      const telegramUrl = `https://t.me/Pashap1991?text=${encodeURIComponent(message)}`
-      window.open(telegramUrl, '_blank')
+      // Отправляем данные в Google Sheets
+      await fetch('https://script.google.com/macros/s/AKfycbzL7o8Y3J4kQXoQJvK3w1IVx27J4aGyltKBZwFE/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submitData)
+      })
       
       setIsSubmitting(false)
       setSubmitStatus('success')
@@ -83,6 +85,7 @@ export default function AddTestimonial() {
         })
       }, 3000)
     } catch (error) {
+      console.error('Ошибка отправки отзыва:', error)
       setIsSubmitting(false)
       setSubmitStatus('error')
     }
@@ -103,10 +106,10 @@ export default function AddTestimonial() {
                 <FaHeart className="w-8 h-8 text-green-600" />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Спасибо за отзыв!
+                Отзыв отправлен!
               </h2>
               <p className="text-gray-600 mb-6">
-                Ваш отзыв отправлен на модерацию и будет опубликован после проверки.
+                Ваш отзыв успешно сохранен в нашей базе данных. Спасибо за обратную связь!
               </p>
               <div className="text-sm text-gray-500">
                 Форма автоматически закроется через несколько секунд

@@ -78,9 +78,7 @@ export default function TestimonialsHero() {
             </div>
             
             <blockquote className="text-lg text-gray-700 mb-6 italic leading-relaxed">
-              "Доктор помогла нам с самого рождения дочки. Очень внимательная, всегда на связи, 
-              дает подробные объяснения. Ребенок не боится врачей благодаря ее подходу. 
-              Рекомендую всем родителям!"
+              "Никогда не писала отзывов ни об одном враче. Хотя с ребенком пришлось объехать очень много разных - не сосчитаю... К Али Муслимовичу обращаемся из Костромской области. Ребята, таких врачей, как говорят, днем с огнем не сыщешь! Профессионал! Умница! Всесторонне владеет информацией! Принял нас даже в отпуске, жертвуя своим временем! Огромная благодарность и низкий поклон доктору! Человек и врач с большой буквы!"
             </blockquote>
             
             <div className="flex items-center">
@@ -88,8 +86,8 @@ export default function TestimonialsHero() {
                 <FaHeart className="w-6 h-6 text-primary-600" />
               </div>
               <div>
-                <div className="font-semibold text-gray-900">Елена Козлова</div>
-                <div className="text-sm text-gray-500">мама Алисы, 1 год</div>
+                <div className="font-semibold text-gray-900">Анонимный пользователь</div>
+                <div className="text-sm text-gray-500">родитель из Костромской области</div>
               </div>
             </div>
           </div>
