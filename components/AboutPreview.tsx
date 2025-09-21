@@ -44,7 +44,7 @@ export default function AboutPreview() {
               <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl overflow-hidden">
                 <img 
                   src="/images/doctor-1.jpg" 
-                  alt="Детский врач-педиатр" 
+                  alt="Али Муслимович - педиатр" 
                   className="w-full h-full object-cover"
                 />
               </div>

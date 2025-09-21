@@ -35,7 +35,7 @@ export default function Map() {
               <div className="text-center">
                 <FaMapMarkerAlt className="w-16 h-16 text-primary-600 mx-auto mb-4" />
                 <p className="text-gray-600 font-medium">Интерактивная карта</p>
-                <p className="text-sm text-gray-500">г. Москва, ул. Примерная, д. 1</p>
+                <p className="text-sm text-gray-500">Персона. Нижний Новгород, Сибирская 3. Метро Стрелка</p>
               </div>
             </div>
             
@@ -43,7 +43,7 @@ export default function Map() {
             <div className="absolute top-4 left-4 bg-white rounded-lg p-4 shadow-lg">
               <div className="flex items-center space-x-2">
                 <FaMapMarkerAlt className="w-4 h-4 text-red-500" />
-                <span className="text-sm font-medium">Клиника "Детский врач"</span>
+                <span className="text-sm font-medium">Клиника "Али Муслимович"</span>
               </div>
             </div>
           </motion.div>

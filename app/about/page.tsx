@@ -5,7 +5,7 @@ import Experience from '@/components/Experience'
 import Approach from '@/components/Approach'
 
 export const metadata: Metadata = {
-  title: 'Обо мне - Детский врач | Педиатр с 8-летним опытом',
+  title: 'Обо мне - Али Муслимович | Педиатр с 8-летним опытом',
   description: 'Познакомьтесь с детским врачом-педиатром. Образование, опыт работы, подход к лечению детей. Более 8 лет практики в детской медицине.',
   keywords: 'педиатр, детский врач, опыт работы, образование, биография врача',
 }

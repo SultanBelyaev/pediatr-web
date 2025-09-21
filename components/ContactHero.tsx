@@ -29,14 +29,14 @@ export default function ContactHero() {
       action: 'https://wa.me/79307140303',
       color: 'bg-green-100 text-green-600'
     },
-    {
-      icon: FaMapMarkerAlt,
-      title: 'Приехать',
-      description: 'Посетить клинику',
-      value: 'г. Москва, ул. Примерная, д. 1',
-      action: '#map',
-      color: 'bg-purple-100 text-purple-600'
-    },
+        {
+          icon: FaMapMarkerAlt,
+          title: 'Приехать',
+          description: 'Посетить клинику',
+          value: 'Персона. Нижний Новгород, Сибирская 3. Метро Стрелка',
+          action: 'https://personaclinic.ru/specialists/magomedov-ali-muslimovich/?ysclid=mftlwa3qdp449977516',
+          color: 'bg-purple-100 text-purple-600'
+        },
     {
       icon: FaClock,
       title: 'Время работы',
@@ -92,6 +92,8 @@ export default function ContactHero() {
               {method.action && (
                 <a
                   href={method.action}
+                  target={method.action.startsWith('http') ? '_blank' : '_self'}
+                  rel={method.action.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className={`inline-block px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                     method.color.includes('green') 
                       ? 'bg-green-600 text-white hover:bg-green-700'

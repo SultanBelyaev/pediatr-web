@@ -47,7 +47,7 @@ export default function Header() {
               <span className="text-primary-600 font-bold text-xl">П</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Детский врач</h1>
+              <h1 className="text-xl font-bold text-gray-900">Али Муслимович</h1>
               <p className="text-sm text-gray-600">Педиатр</p>
             </div>
           </Link>

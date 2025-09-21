@@ -13,7 +13,7 @@ export default function Footer() {
                 <span className="text-primary-600 font-bold text-xl">П</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Детский врач</h3>
+                <h3 className="text-xl font-bold">Али Муслимович</h3>
                 <p className="text-gray-400">Педиатр</p>
               </div>
             </div>
@@ -82,10 +82,10 @@ export default function Footer() {
                 <FaWhatsapp className="w-4 h-4 text-primary-400" />
                 <a href="https://wa.me/79307140303" className="text-gray-300 hover:text-white transition-colors">+7 930 714 0303</a>
               </div>
-              <div className="flex items-center space-x-3">
-                <FaMapMarkerAlt className="w-4 h-4 text-primary-400" />
-                <span className="text-gray-300">г. Москва, ул. Примерная, д. 1</span>
-              </div>
+                  <div className="flex items-center space-x-3">
+                    <FaMapMarkerAlt className="w-4 h-4 text-primary-400" />
+                    <span className="text-gray-300">Персона. Нижний Новгород, Сибирская 3. Метро Стрелка</span>
+                  </div>
               <div className="flex items-center space-x-3">
                 <FaClock className="w-4 h-4 text-primary-400" />
                 <div className="text-gray-300">
@@ -100,7 +100,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Детский врач. Все права защищены.
+              © 2024 Али Муслимович. Все права защищены.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
