@@ -5,7 +5,7 @@ import { FaUserMd, FaHeart, FaStethoscope, FaAward } from 'react-icons/fa'
 
 export default function AboutHero() {
   const stats = [
-    { number: '15+', label: 'лет опыта' },
+    { number: '8+', label: 'лет опыта' },
     { number: '2000+', label: 'пациентов' },
     { number: '50+', label: 'курсов повышения квалификации' },
     { number: '100%', label: 'доверие родителей' }
@@ -59,7 +59,7 @@ export default function AboutHero() {
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Меня зовут [Имя Фамилия], и я — детский врач-педиатр с более чем 15-летним опытом работы. 
+              Меня зовут [Имя Фамилия], и я — детский врач-педиатр с более чем 8-летним опытом работы. 
               Моя миссия — обеспечить каждому ребенку качественную медицинскую помощь 
               в комфортной и безопасной обстановке.
             </p>

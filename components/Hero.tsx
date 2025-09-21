@@ -24,7 +24,7 @@ export default function Hero() {
     {
       icon: FaUserMd,
       title: 'Опыт работы',
-      description: 'Более 15 лет практики в детской медицине'
+      description: 'Более 8 лет практики в детской медицине'
     }
   ]
 
@@ -64,7 +64,7 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600">15+</div>
+                <div className="text-3xl font-bold text-primary-600">8+</div>
                 <div className="text-sm text-gray-600">лет опыта</div>
               </div>
               <div className="text-center">

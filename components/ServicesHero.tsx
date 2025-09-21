@@ -23,7 +23,7 @@ export default function ServicesHero() {
     {
       icon: FaUserMd,
       title: 'Опыт работы',
-      description: 'Более 15 лет практики в детской медицине'
+      description: 'Более 8 лет практики в детской медицине'
     }
   ]
 

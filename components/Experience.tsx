@@ -36,7 +36,7 @@ export default function Experience() {
     },
     {
       icon: FaHeart,
-      title: '15+ лет опыта',
+      title: '8+ лет опыта',
       description: 'Непрерывной работы в педиатрии'
     },
     {
@@ -60,7 +60,7 @@ export default function Experience() {
             Профессиональный опыт
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Более 15 лет практики в различных медицинских учреждениях
+            Более 8 лет практики в различных медицинских учреждениях
           </p>
         </motion.div>
 

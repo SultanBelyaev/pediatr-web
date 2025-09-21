@@ -19,7 +19,7 @@ export default function AboutPreview() {
     {
       icon: FaUserMd,
       title: 'Опыт работы',
-      description: '15+ лет в детской больнице, частная практика с 2015 года'
+      description: '8+ лет в детской больнице, частная практика с 2015 года'
     },
     {
       icon: FaHeart,
@@ -53,7 +53,7 @@ export default function AboutPreview() {
               {/* Floating stats */}
               <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-6 max-w-xs">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-1">15+</div>
+                  <div className="text-3xl font-bold text-primary-600 mb-1">8+</div>
                   <div className="text-sm text-gray-600">лет опыта</div>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export default function AboutPreview() {
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Я — детский врач-педиатр с более чем 15-летним опытом работы. 
+              Я — детский врач-педиатр с более чем 8-летним опытом работы. 
               Моя миссия — обеспечить каждому ребенку качественную медицинскую помощь 
               в комфортной и безопасной обстановке.
             </p>
