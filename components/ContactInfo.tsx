@@ -9,18 +9,27 @@ export default function ContactInfo() {
       icon: FaPhone,
       title: 'Телефон',
       details: [
-        'Основной: +7 (XXX) XXX-XX-XX',
-        'Экстренный: +7 (XXX) XXX-XX-XX',
+        'Основной: +7 930 714 0303',
+        'Экстренный: +7 930 714 0303',
         'Время звонков: 8:00-20:00'
       ]
     },
     {
-      icon: FaEnvelope,
-      title: 'Email',
+      icon: FaTelegram,
+      title: 'Telegram',
       details: [
-        'pediatr@example.com',
-        'Ответ в течение 2 часов',
-        'В рабочие дни'
+        '@Pashap1991',
+        'Быстрые ответы',
+        'Круглосуточно'
+      ]
+    },
+    {
+      icon: FaWhatsapp,
+      title: 'WhatsApp',
+      details: [
+        '+7 930 714 0303',
+        'Голосовые сообщения',
+        'Круглосуточно'
       ]
     },
     {
@@ -47,13 +56,13 @@ export default function ContactInfo() {
     {
       icon: FaWhatsapp,
       name: 'WhatsApp',
-      url: '#',
+      url: 'https://wa.me/79307140303',
       color: 'bg-green-500 hover:bg-green-600'
     },
     {
       icon: FaTelegram,
       name: 'Telegram',
-      url: '#',
+      url: 'https://t.me/Pashap1991',
       color: 'bg-blue-500 hover:bg-blue-600'
     },
     {

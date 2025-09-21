@@ -34,9 +34,9 @@ export default function CTA() {
             >
               <FaPhone className="w-8 h-8 mx-auto mb-4 text-primary-200" />
               <h3 className="font-semibold mb-2">Позвонить</h3>
-              <p className="text-sm opacity-90 mb-4">+7 (XXX) XXX-XX-XX</p>
+              <p className="text-sm opacity-90 mb-4">+7 930 714 0303</p>
               <a 
-                href="tel:+7XXXXXXXXXX" 
+                href="tel:+79307140303" 
                 className="inline-block bg-white text-primary-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200"
               >
                 Позвонить

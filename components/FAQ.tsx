@@ -14,7 +14,7 @@ export default function FAQ() {
     },
     {
       question: 'Как записаться на прием?',
-      answer: 'Записаться можно по телефону +7 (XXX) XXX-XX-XX, через форму на сайте или по электронной почте pediatr@example.com. Работаю по предварительной записи.'
+      answer: 'Записаться можно по телефону +7 930 714 0303, через форму на сайте или в Telegram @Pashap1991. Работаю по предварительной записи.'
     },
     {
       question: 'Возможен ли вызов на дом?',
@@ -121,7 +121,7 @@ export default function FAQ() {
               <a href="/contacts" className="btn-primary">
                 Задать вопрос
               </a>
-              <a href="tel:+7XXXXXXXXXX" className="btn-secondary">
+              <a href="tel:+79307140303" className="btn-secondary">
                 Позвонить
               </a>
             </div>

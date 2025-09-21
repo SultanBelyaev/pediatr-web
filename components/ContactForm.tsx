@@ -153,7 +153,7 @@ export default function ContactForm() {
                         onChange={handleInputChange}
                         required
                         className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                        placeholder="+7 (XXX) XXX-XX-XX"
+                        placeholder="+7 930 714 0303"
                       />
                     </div>
                   </div>
@@ -336,7 +336,7 @@ export default function ContactForm() {
                   не ждите ответа на заявку, звоните сразу!
                 </p>
                 <a 
-                  href="tel:+7XXXXXXXXXX" 
+                  href="tel:+79307140303" 
                   className="inline-block bg-red-600 text-white hover:bg-red-700 font-medium py-2 px-4 rounded-lg transition-colors duration-200"
                 >
                   🚨 Экстренный вызов

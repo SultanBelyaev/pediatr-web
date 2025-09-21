@@ -41,13 +41,12 @@ export default function AboutPreview() {
             className="relative"
           >
             <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FaUserMd className="w-12 h-12 text-primary-600" />
-                  </div>
-                  <p className="text-gray-600">Фото врача</p>
-                </div>
+              <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl overflow-hidden">
+                <img 
+                  src="/images/doctor-1.jpg" 
+                  alt="Детский врач-педиатр" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Floating stats */}

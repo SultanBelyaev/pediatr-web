@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { FaBars, FaTimes, FaPhone, FaEnvelope } from 'react-icons/fa'
+import { FaBars, FaTimes, FaPhone, FaEnvelope, FaTelegram } from 'react-icons/fa'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,11 +24,11 @@ export default function Header() {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <FaPhone className="w-3 h-3" />
-                <span>+7 (XXX) XXX-XX-XX</span>
+                <span>+7 930 714 0303</span>
               </div>
               <div className="flex items-center space-x-2">
-                <FaEnvelope className="w-3 h-3" />
-                <span>pediatr@example.com</span>
+                <FaTelegram className="w-3 h-3" />
+                <a href="https://t.me/Pashap1991" className="hover:text-primary-400 transition-colors">@Pashap1991</a>
               </div>
             </div>
             <div className="hidden md:block">

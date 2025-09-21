@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaTelegram, FaWhatsapp } from 'react-icons/fa'
 
 export default function ContactHero() {
   const contactMethods = [
@@ -9,17 +9,25 @@ export default function ContactHero() {
       icon: FaPhone,
       title: 'Позвонить',
       description: 'Быстрая запись на прием',
-      value: '+7 (XXX) XXX-XX-XX',
-      action: 'tel:+7XXXXXXXXXX',
+      value: '+7 930 714 0303',
+      action: 'tel:+79307140303',
       color: 'bg-green-100 text-green-600'
     },
     {
-      icon: FaEnvelope,
-      title: 'Написать',
-      description: 'Отправить сообщение',
-      value: 'pediatr@example.com',
-      action: 'mailto:pediatr@example.com',
+      icon: FaTelegram,
+      title: 'Telegram',
+      description: 'Написать в Telegram',
+      value: '@Pashap1991',
+      action: 'https://t.me/Pashap1991',
       color: 'bg-blue-100 text-blue-600'
+    },
+    {
+      icon: FaWhatsapp,
+      title: 'WhatsApp',
+      description: 'Написать в WhatsApp',
+      value: '+7 930 714 0303',
+      action: 'https://wa.me/79307140303',
+      color: 'bg-green-100 text-green-600'
     },
     {
       icon: FaMapMarkerAlt,
@@ -117,7 +125,7 @@ export default function ContactHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+7XXXXXXXXXX" 
+                href="tel:+79307140303" 
                 className="bg-red-600 text-white hover:bg-red-700 font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 🚨 Экстренный вызов

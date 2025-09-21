@@ -75,7 +75,7 @@ export default function Map() {
                   <FaPhone className="w-5 h-5 text-primary-600 mt-1" />
                   <div>
                     <p className="font-medium text-gray-900">Телефон</p>
-                    <p className="text-gray-600">+7 (XXX) XXX-XX-XX</p>
+                    <p className="text-gray-600">+7 930 714 0303</p>
                     <p className="text-sm text-gray-500">Рабочие дни: 9:00-18:00</p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export default function Map() {
                 <span>Построить маршрут</span>
               </a>
               <a
-                href="tel:+7XXXXXXXXXX"
+                href="tel:+79307140303"
                 className="flex items-center justify-center space-x-2 bg-white text-primary-600 hover:bg-gray-50 font-medium py-3 px-6 rounded-lg border-2 border-primary-600 transition-colors duration-200"
               >
                 <FaPhone className="w-4 h-4" />

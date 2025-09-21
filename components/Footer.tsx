@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaTelegram } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaTelegram, FaWhatsapp } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -72,11 +72,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <FaPhone className="w-4 h-4 text-primary-400" />
-                <span className="text-gray-300">+7 (XXX) XXX-XX-XX</span>
+                <span className="text-gray-300">+7 930 714 0303</span>
               </div>
               <div className="flex items-center space-x-3">
-                <FaEnvelope className="w-4 h-4 text-primary-400" />
-                <span className="text-gray-300">pediatr@example.com</span>
+                <FaTelegram className="w-4 h-4 text-primary-400" />
+                <a href="https://t.me/Pashap1991" className="text-gray-300 hover:text-white transition-colors">@Pashap1991</a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <FaWhatsapp className="w-4 h-4 text-primary-400" />
+                <a href="https://wa.me/79307140303" className="text-gray-300 hover:text-white transition-colors">+7 930 714 0303</a>
               </div>
               <div className="flex items-center space-x-3">
                 <FaMapMarkerAlt className="w-4 h-4 text-primary-400" />
