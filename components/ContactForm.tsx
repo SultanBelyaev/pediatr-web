@@ -40,27 +40,52 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Имитация отправки формы
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setIsSubmitting(false)
-    setSubmitStatus('success')
-    
-    // Сброс формы через 3 секунды
-    setTimeout(() => {
-      setSubmitStatus('idle')
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        childAge: '',
-        service: '',
-        message: '',
-        preferredContact: 'phone',
-        agreeToTerms: false
+    setSubmitStatus('idle')
+
+    try {
+      // Отправка данных в Telegram бот
+      const response = await fetch('http://localhost:3001/api/send-appointment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.service || 'Запись на прием',
+          message: formData.message,
+          preferredContact: formData.preferredContact
+        }),
       })
-    }, 3000)
+
+      const result = await response.json()
+      
+      if (result.success) {
+        setSubmitStatus('success')
+        // Сброс формы через 3 секунды
+        setTimeout(() => {
+          setSubmitStatus('idle')
+          setFormData({
+            name: '',
+            phone: '',
+            email: '',
+            childAge: '',
+            service: '',
+            message: '',
+            preferredContact: 'phone',
+            agreeToTerms: false
+          })
+        }, 3000)
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Ошибка при отправке заявки:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (submitStatus === 'success') {
